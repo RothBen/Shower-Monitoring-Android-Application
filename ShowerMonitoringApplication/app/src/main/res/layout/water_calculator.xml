@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/CalcTime"
+        android:layout_width="167dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:text="Daily Shower Time:"
+        android:textAlignment="viewStart"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/CalcTimeUnits"
+        android:layout_width="82dp"
+        android:layout_height="38dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center"
+        android:text="minutes"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/CalcTime"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/CalcTime" />
+
+    <EditText
+        android:id="@+id/CalcTimeValue"
+        android:layout_width="71dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/CalcTime"
+        app:layout_constraintEnd_toStartOf="@+id/CalcTimeUnits"
+        app:layout_constraintStart_toEndOf="@+id/CalcTime"
+        app:layout_constraintTop_toTopOf="@+id/CalcTime" />
+
+
+    <TextView
+        android:id="@+id/CalcFlow"
+        android:layout_width="167dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:text="Flowrate:"
+        android:textAlignment="viewStart"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CalcTime" />
+
+    <TextView
+        android:id="@+id/CalcFlowUnits"
+        android:layout_width="82dp"
+        android:layout_height="38dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center"
+        android:text="gal/min"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/CalcFlow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/CalcFlow" />
+
+
+    <EditText
+        android:id="@+id/CalcFlowValue"
+        android:layout_width="71dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/CalcFlow"
+        app:layout_constraintEnd_toStartOf="@+id/CalcFlowUnits"
+        app:layout_constraintStart_toEndOf="@+id/CalcFlow"
+        app:layout_constraintTop_toTopOf="@+id/CalcFlow" />
+
+
+    <TextView
+        android:id="@+id/CalcCost"
+        android:layout_width="167dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:text="Cost Per Gallon:"
+        android:textAlignment="viewStart"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CalcFlow" />
+
+    <TextView
+        android:id="@+id/CalcCostUnits"
+        android:layout_width="82dp"
+        android:layout_height="38dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center"
+        android:text="dollars"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/CalcCost"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/CalcCost" />
+
+
+    <EditText
+        android:id="@+id/CalcCostValue"
+        android:layout_width="71dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/CalcCost"
+        app:layout_constraintEnd_toStartOf="@+id/CalcCostUnits"
+        app:layout_constraintStart_toEndOf="@+id/CalcCost"
+        app:layout_constraintTop_toTopOf="@+id/CalcCost" />
+
+    <Button
+        android:id="@+id/CalcButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="30dp"
+        android:text="Calculate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CalcCost" />
+
+    <TextView
+        android:id="@+id/YearlyWaterCost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:layout_marginStart="20dp"
+        android:text="Yearly Water Cost:"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/YearlyWaterCostValue"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:textAlignment="textEnd"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/YearlyWaterCost"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/YearlyWaterCost" />
+
+
+    <TextView
+        android:id="@+id/MonthlyWaterCost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:layout_marginStart="20dp"
+        android:text="Monthly Water Cost:"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/YearlyWaterUsage"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/MonthlyWaterCostValue"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="8dp"
+        android:textAlignment="textEnd"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/MonthlyWaterCost"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/MonthlyWaterCost" />
+
+    <TextView
+        android:id="@+id/MonthlyWaterUsage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:layout_marginStart="20dp"
+        android:text="Monthly Water Usage:"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/MonthlyWaterCost"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/YearlyWaterUsage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:layout_marginStart="20dp"
+        android:text="Yearly Water Usage:"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/YearlyWaterCost"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/MonthlyWaterUsageValue"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:textAlignment="textEnd"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/MonthlyWaterUsage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/MonthlyWaterUsage" />
+
+    <TextView
+        android:id="@+id/YearlyWaterUsageValue"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="8dp"
+        android:textAlignment="textEnd"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/YearlyWaterUsage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/YearlyWaterUsage" />
+
+
+</android.support.constraint.ConstraintLayout>

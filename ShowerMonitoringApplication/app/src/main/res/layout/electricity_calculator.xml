@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/ColdTempText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:text="Cold Water Temperature:"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/TimeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:text="Daily Shower Time:"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ColdTempText" />
+
+    <TextView
+        android:id="@+id/FlowRateText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:text="Shower Flow Rate:"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TimeText" />
+
+    <TextView
+        android:id="@+id/EfficiencyText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:text="Water Heater Efficiency:"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TempText" />
+
+    <TextView
+        android:id="@+id/PowerCostText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:text="Cost Per kWh:"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EfficiencyText" />
+
+    <TextView
+        android:id="@+id/ColdTempUnits"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="Degrees (F)"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/ColdTempText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ColdTempText" />
+
+    <TextView
+        android:id="@+id/TimeUnits"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="Minutes"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/TimeText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/TimeValue"
+        app:layout_constraintTop_toTopOf="@+id/TimeText" />
+
+    <TextView
+        android:id="@+id/FlowRateUnits"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="Gal/min"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/FlowRateText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/FlowRateValue"
+        app:layout_constraintTop_toTopOf="@+id/FlowRateText" />
+
+    <TextView
+        android:id="@+id/PowerCostUnits"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="Dollars"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/PowerCostText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/PowerCostValue"
+        app:layout_constraintTop_toTopOf="@+id/PowerCostText" />
+
+    <EditText
+        android:id="@+id/ColdWaterValue"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/ColdTempText"
+        app:layout_constraintEnd_toStartOf="@+id/ColdTempUnits"
+        app:layout_constraintTop_toTopOf="@+id/ColdTempText" />
+
+    <EditText
+        android:id="@+id/TimeValue"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/TimeText"
+        app:layout_constraintEnd_toEndOf="@+id/ColdWaterValue"
+        app:layout_constraintStart_toStartOf="@+id/ColdWaterValue"
+        app:layout_constraintTop_toTopOf="@+id/TimeText" />
+
+    <EditText
+        android:id="@+id/FlowRateValue"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/FlowRateText"
+        app:layout_constraintEnd_toEndOf="@+id/TimeValue"
+        app:layout_constraintTop_toTopOf="@+id/FlowRateText" />
+
+    <EditText
+        android:id="@+id/EfficiencyValue"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/EfficiencyText"
+        app:layout_constraintEnd_toEndOf="@+id/TempValue"
+        app:layout_constraintStart_toStartOf="@+id/TempValue"
+        app:layout_constraintTop_toTopOf="@+id/EfficiencyText" />
+
+    <EditText
+        android:id="@+id/PowerCostValue"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/PowerCostText"
+        app:layout_constraintEnd_toEndOf="@+id/EfficiencyValue"
+        app:layout_constraintTop_toTopOf="@+id/PowerCostText"
+        app:layout_constraintVertical_bias="0.523" />
+
+    <Button
+        android:id="@+id/CalcButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Calculate"
+        app:layout_constraintBottom_toTopOf="@+id/MonthlyPowerText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PowerCostValue" />
+
+    <TextView
+        android:id="@+id/PowerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="8dp"
+        android:text="Yearly Power Used:"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/TotalCostText"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/TotalCostText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="8dp"
+        android:text="Yearly Power Cost:"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/PowerValue"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:textAlignment="textEnd"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/PowerText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/PowerText" />
+
+    <TextView
+        android:id="@+id/TotalCostValue"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:textAlignment="textEnd"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/TotalCostText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/TotalCostText" />
+
+    <TextView
+        android:id="@+id/TempText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:text="Average Temperature:"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/FlowRateText" />
+
+    <EditText
+        android:id="@+id/TempValue"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/TempText"
+        app:layout_constraintEnd_toEndOf="@+id/FlowRateValue"
+        app:layout_constraintStart_toStartOf="@+id/FlowRateValue"
+        app:layout_constraintTop_toTopOf="@+id/TempText" />
+
+    <TextView
+        android:id="@+id/TempUnits"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="Degrees (F)"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/TempText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/TempText" />
+
+    <TextView
+        android:id="@+id/MonthlyPowerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="8dp"
+        android:text="Monthly Power Used:"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/MonthlyPowerCost"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/MonthlyPowerCost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="8dp"
+        android:text="Monthly Power Cost:"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/PowerText"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/MonthlyPowerValue"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:textAlignment="textEnd"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/MonthlyPowerText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/MonthlyPowerText" />
+
+    <TextView
+        android:id="@+id/MonthlyCostValue"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:textAlignment="textEnd"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/MonthlyPowerCost"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/MonthlyPowerCost"
+        app:layout_constraintVertical_bias="1.0" />
+</android.support.constraint.ConstraintLayout>
